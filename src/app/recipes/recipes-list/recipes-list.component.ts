@@ -13,16 +13,11 @@ export class RecipesListComponent implements OnInit {
     new Recipe("A test", "Simple test", "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/prawn_fried_rice-2481925.jpg?quality=90&resize=440,400:*")
   ]
 
-  constructor(private http: HttpClient) {
+  constructor() {
   }
 
   ngOnInit() {
-    this.getPosts()
-    console.log(this.test)
+
   }
 
-  test
-  public getPosts() {
-    this.test = this.http.get(`https://jsonplaceholder.typicode.com/posts/1`)
-  }
 }

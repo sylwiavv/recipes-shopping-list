@@ -10,6 +10,9 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { RecipesListComponent } from './recipes/recipes-list/recipes-list.component';
 import {HttpClientModule} from "@angular/common/http";
+import { PostsComponent } from './posts/posts.component';
+import { PostItemComponent } from './posts/post-item/post-item.component';
+import {UserAvatarComponent} from "./posts/post-item/user-avatar/user-avatar.component";
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import {HttpClientModule} from "@angular/common/http";
     RecipesComponent,
     RecipeDetailComponent,
     RecipesListComponent,
-    RecipeItemComponent
+    RecipeItemComponent,
+    PostsComponent,
+    UserAvatarComponent,
+    PostItemComponent
   ],
   imports: [
     BrowserModule,
