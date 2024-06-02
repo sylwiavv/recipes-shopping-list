@@ -1,5 +1,8 @@
 <div class="row">
   <h3>Posts</h3>
+  @if (postsLoading) {
+  <p>Loading...</p>
+  }
   @for(post of posts; track post.id) {
   <app-post-item [post]="post"></app-post-item>
   }

@@ -10,6 +10,7 @@ import { Subscription } from 'rxjs';
 export class PostsComponent implements OnInit {
   @Input() posts: Post[] = [];
   private subscription: Subscription;
+  @Input() postsLoading = false
 
   constructor(private http: HttpClient) {}
 
@@ -18,10 +19,11 @@ export class PostsComponent implements OnInit {
   }
 
   getPosts() {
+    this.postsLoading = true
     this.subscription = this.http.get<Post[]>('https://jsonplaceholder.typicode.com/posts')
       .subscribe((data: Post[]) => {
-        console.log(data)
         this.posts = data;
+        this.postsLoading = false
       }, (error) => {
         console.error('Error fetching posts', error);
       });

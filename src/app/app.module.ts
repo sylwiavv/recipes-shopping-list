@@ -13,6 +13,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { PostsComponent } from './posts/posts.component';
 import { PostItemComponent } from './posts/post-item/post-item.component';
 import {UserAvatarComponent} from "./posts/post-item/user-avatar/user-avatar.component";
+import {NgIf} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {UserAvatarComponent} from "./posts/post-item/user-avatar/user-avatar.com
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    NgIf
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -16,7 +16,7 @@ article {
   border-radius: 24px;
   background: #ffffff;
   margin-bottom: 16px;
-  max-width: 60%;
+  /*max-width: 60%;*/
 }
 
 .user-avatar {
