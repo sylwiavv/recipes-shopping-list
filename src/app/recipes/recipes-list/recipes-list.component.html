@@ -3,6 +3,10 @@
     <button style="margin-bottom: 16px" class="btn btn-success">New Recipe</button>
   </div>
 </div>
+<p basicHighLightDirective>Hello pink test</p>
+<p betterBasicHighLightDirective>Hello blue better</p>
+<p betterBasicHighLightDirectiveWithHostBinding>Hello blue Host Binding</p>
+<p betterBasicHighLightDirectiveWithHostBinding [defaultColor]="'#b0815a'" [highlightColor]="'#a64a00'">Hello blue Host Binding</p>
 <div class="row recipes-container">
   <div class="col-xs-12">
     @for (recipeElement of recipes; track recipeElement.name) {

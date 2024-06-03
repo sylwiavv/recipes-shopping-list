@@ -1,9 +1,20 @@
 <div class="row">
   <div class="col-xs-10">
-    <app-shopping-edit/>
+    <app-shopping-edit
+      (ingredientAdded)="onIngredientAdded($event)"></app-shopping-edit>
     <hr/>
-  <ul class="list-group">
+    <ul class="list-group">
+      <li *ngFor="let ingredient of ingredients">
+      <a
+        [ngStyle]="{backgroundColor: ingredient.name.toLowerCase() === 'apple' ? 'green': 'pink'}"
+        [ngClass]="{'pink': ingredient.name.toLowerCase() === 'apple'}"
+        class="list-group-item"
+        style="cursor: pointer"
 
-  </ul>
+      >
+          {{ ingredient.name }} ({{ ingredient.amount }})
+      </a>
+      </li>
+    </ul>
   </div>
 </div>

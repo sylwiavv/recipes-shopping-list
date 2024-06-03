@@ -1,11 +1,4 @@
 .image-container {
-  height: 400px;
-  width: 400px;
-  overflow: hidden;
-  object-fit: cover;
-}
-
-.image-container > img {
-  width: 100%;
-  height: auto;
+  max-width: 400px;
+  max-height: 400px;
 }

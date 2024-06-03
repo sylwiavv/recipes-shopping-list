@@ -8,9 +8,18 @@ import {IngredientType} from "./shopping-list.model";
   styleUrl: './shopping-list.component.css'
 })
 export class ShoppingListComponent implements OnInit {
-  ingredients: IngredientType[] = [new Ingredient("Apple", 5)]
+  ingredients: IngredientType[] = [
+    new Ingredient("Apple", 5),
+    new Ingredient('Tomatoes', 10),
+  ]
+
   constructor() {
 
+  }
+
+  onIngredientAdded(ingredient: Ingredient) {
+    console.log(ingredient, "ingredient");
+    this.ingredients.push(ingredient);
   }
 
   ngOnInit() {

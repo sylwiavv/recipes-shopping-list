@@ -14,6 +14,12 @@ import { PostsComponent } from './posts/posts.component';
 import { PostItemComponent } from './posts/post-item/post-item.component';
 import {UserAvatarComponent} from "./posts/post-item/user-avatar/user-avatar.component";
 import { CommonModule} from "@angular/common";
+import {FormsModule} from "@angular/forms";
+import {BasicHighLightDirective} from "./directives/basicHighLightDirective/basicHighLightDirective";
+import {BetterBasicHighLightDirective} from "./directives/basicHighLightDirective/betterBasicHighLightDirective";
+import {
+  BetterBasicHighLightDirectiveWithHostBinding
+} from "./directives/basicHighLightDirective/betterBasicHighLightDirectiveWithHostBinding";
 
 @NgModule({
   declarations: [
@@ -29,12 +35,16 @@ import { CommonModule} from "@angular/common";
     RecipeItemComponent,
     PostsComponent,
     UserAvatarComponent,
-    PostItemComponent
+    PostItemComponent,
+    BasicHighLightDirective,
+    BetterBasicHighLightDirective,
+    BetterBasicHighLightDirectiveWithHostBinding
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
