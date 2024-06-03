@@ -5,8 +5,8 @@
 </div>
 <div class="row recipes-container">
   <div class="col-xs-12">
-    @for(recipe of recipes; track recipe.name) {
-    <app-recipe-item [recipe]="recipe" />
+    @for (recipeElement of recipes; track recipeElement.name) {
+    <app-recipe-item [recipe]="recipeElement" (selectedRecipe)="onRecipeSelected(recipeElement)"></app-recipe-item>
     }
   </div>
 </div>
