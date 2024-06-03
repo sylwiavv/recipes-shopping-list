@@ -20,6 +20,7 @@ import {BetterBasicHighLightDirective} from "./directives/basicHighLightDirectiv
 import {
   BetterBasicHighLightDirectiveWithHostBinding
 } from "./directives/basicHighLightDirective/betterBasicHighLightDirectiveWithHostBinding";
+import {DropdownDirective} from "./directives/dropdown/dropdown.directive";
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import {
     PostItemComponent,
     BasicHighLightDirective,
     BetterBasicHighLightDirective,
-    BetterBasicHighLightDirectiveWithHostBinding
+    BetterBasicHighLightDirectiveWithHostBinding,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
