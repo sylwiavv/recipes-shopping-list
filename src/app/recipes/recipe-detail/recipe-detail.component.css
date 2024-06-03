@@ -1,4 +1,8 @@
 .image-container {
   max-width: 400px;
   max-height: 400px;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 50%;
 }
+

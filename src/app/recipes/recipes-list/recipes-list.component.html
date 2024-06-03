@@ -10,7 +10,7 @@
 <div class="row recipes-container">
   <div class="col-xs-12">
     @for (recipeElement of recipes; track recipeElement.name) {
-    <app-recipe-item [recipe]="recipeElement" (selectedRecipe)="onRecipeSelected(recipeElement)"></app-recipe-item>
+    <app-recipe-item [recipe]="recipeElement"></app-recipe-item>
     }
   </div>
 </div>
