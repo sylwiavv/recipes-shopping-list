@@ -21,6 +21,7 @@ import {
   BetterBasicHighLightDirectiveWithHostBinding
 } from "./directives/basicHighLightDirective/betterBasicHighLightDirectiveWithHostBinding";
 import {DropdownDirective} from "./directives/dropdown/dropdown.directive";
+import {ShoppingListService} from "./shopping-list/shoppingListService";
 
 @NgModule({
   declarations: [
@@ -48,7 +49,7 @@ import {DropdownDirective} from "./directives/dropdown/dropdown.directive";
     CommonModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
