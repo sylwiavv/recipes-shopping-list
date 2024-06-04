@@ -22,6 +22,7 @@ import {
 } from "./directives/basicHighLightDirective/betterBasicHighLightDirectiveWithHostBinding";
 import {DropdownDirective} from "./directives/dropdown/dropdown.directive";
 import {ShoppingListService} from "./shopping-list/shoppingListService";
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
@@ -41,13 +42,14 @@ import {ShoppingListService} from "./shopping-list/shoppingListService";
     BasicHighLightDirective,
     BetterBasicHighLightDirective,
     BetterBasicHighLightDirectiveWithHostBinding,
-    DropdownDirective
+    DropdownDirective,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [ShoppingListService],
   bootstrap: [AppComponent]
