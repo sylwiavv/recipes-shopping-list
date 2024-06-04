@@ -11,16 +11,18 @@ import {ShoppingListService} from "./shoppingListService";
 export class ShoppingListComponent implements OnInit {
   ingredients: IngredientType[]
 
-  constructor(private shoppingListService: ShoppingListService ) {
-    this.ingredients = this.shoppingListService.getIngredients()
-  }
+  constructor(private shoppingListService: ShoppingListService ) {}
 
-  onIngredientAdded(ingredient: Ingredient) {
-    console.log(ingredient, "ingredient");
-    this.ingredients.push(ingredient);
-  }
+  // onIngredientAdded(ingredient: Ingredient) {
+  //   console.log(ingredient, "ingredient");
+  //   this.ingredients.push(ingredient);
+  // }
 
   ngOnInit() {
-  }
+    this.ingredients = this.shoppingListService.getIngredients()
 
+    this.shoppingListService.ingredientsChanged.subscribe((ingredients: Ingredient[]) => {
+      this.ingredients = ingredients
+    })
+  }
 }

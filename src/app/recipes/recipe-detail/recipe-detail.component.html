@@ -22,10 +22,19 @@
   </div>
 </div>
 
+<!--<div class="row">-->
+<!--  <div class="col-xs-12">{{recipe.description}}</div>-->
+<!--</div>-->
 <div class="row">
-  <div class="col-xs-12">Describe</div>
-</div>
-<div class="row">
-  <div class="col-xs-12">Ingredients</div>
+  <div class="col-xs-12">
+    <ul class="list-group">
+      @for(ingredient of recipe.ingredients; track ingredient.name) {
+      <li class="list-group-item">
+      {{ingredient.name}} - {{ingredient.amount}}
+</li>
+      }
+
+    </ul>
+  </div>
 </div>
 
