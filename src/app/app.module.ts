@@ -23,6 +23,7 @@ import {
 import {DropdownDirective} from "./directives/dropdown/dropdown.directive";
 import {ShoppingListService} from "./shopping-list/shoppingListService";
 import {AppRoutingModule} from "./app-routing.module";
+import { RecipeStartComponent } from './recipes/recipes-list/recipe-start/recipe-start.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import {AppRoutingModule} from "./app-routing.module";
     BetterBasicHighLightDirective,
     BetterBasicHighLightDirectiveWithHostBinding,
     DropdownDirective,
+    RecipeStartComponent,
   ],
   imports: [
     BrowserModule,

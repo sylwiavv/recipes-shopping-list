@@ -9,8 +9,7 @@
 <p betterBasicHighLightDirectiveWithHostBinding [defaultColor]="'#b0815a'" [highlightColor]="'#a64a00'">Hello blue Host Binding</p>
 <div class="row recipes-container">
   <div class="col-xs-12">
-    @for (recipeElement of recipes; track recipeElement.name) {
-    <app-recipe-item [recipe]="recipeElement"></app-recipe-item>
-    }
+    <app-recipe-item  *ngFor="let recipeElement of recipes; let i = index" [recipe]="recipeElement" [index]="i"></app-recipe-item>
   </div>
+
 </div>

@@ -19,6 +19,11 @@ export class RecipesService {
 
   constructor(private shoppingListService: ShoppingListService) {}
 
+  getRecipe(index: number) {
+    console.log(this.recipes)
+    return this.recipes[index]
+  }
+
   addIngredientToTheShoppingList(ingredients: Ingredient[]) {
     this.shoppingListService.addIngredients(ingredients)
     // this.shoppingListService.getIngredients(ingredients)
