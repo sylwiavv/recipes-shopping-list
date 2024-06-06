@@ -26,6 +26,7 @@ import {AppRoutingModule} from "./app-routing.module";
 import { RecipeStartComponent } from './recipes/recipes-list/recipe-start/recipe-start.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { PageNoFoundComponent } from './page-no-found/page-no-found.component';
+import { UsersComponent } from './users/users.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { PageNoFoundComponent } from './page-no-found/page-no-found.component';
     RecipeStartComponent,
     RecipeEditComponent,
     PageNoFoundComponent,
+    UsersComponent,
   ],
   imports: [
     BrowserModule,

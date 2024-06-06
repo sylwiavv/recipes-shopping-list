@@ -6,7 +6,7 @@ import {PostsComponent} from "./posts/posts.component";
 import {RecipeStartComponent} from "./recipes/recipes-list/recipe-start/recipe-start.component";
 import {RecipeDetailComponent} from "./recipes/recipe-detail/recipe-detail.component";
 import {RecipeEditComponent} from "./recipes/recipe-edit/recipe-edit.component";
-import {PageNoFoundComponent} from "./page-no-found/page-no-found.component";
+import {UsersComponent} from "./users/users.component";
 
 const appRoutes: Routes = [
   {path: "", redirectTo: "/recipes", pathMatch: "full"},
@@ -18,13 +18,11 @@ const appRoutes: Routes = [
     ]},
   {path: "shopping-list", component: ShoppingListComponent},
   {path: "posts", component: PostsComponent},
-  {path: "**", component: PageNoFoundComponent}
+  {path: "users", component: UsersComponent}
 ]
 
 @NgModule({
   imports: [RouterModule.forRoot(appRoutes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {
-
-}
+export class AppRoutingModule {}
