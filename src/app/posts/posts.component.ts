@@ -27,6 +27,8 @@ export class PostsComponent implements OnInit {
       }, (error) => {
         console.error('Error fetching posts', error);
       });
+
+    console.log(this.posts);
   }
 
   ngOnDestroy() {

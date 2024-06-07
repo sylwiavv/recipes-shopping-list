@@ -4,6 +4,8 @@ import {Subject} from "rxjs";
 
 export class ShoppingListService {
   ingredientsChanged = new Subject<Ingredient[]>()
+  startedEditing = new Subject<number>()
+
   private ingredients: IngredientType[] = [
     new Ingredient("Apple", 5),
     new Ingredient('Tomatoes', 10),
@@ -12,6 +14,7 @@ export class ShoppingListService {
   getIngredients() {
     return this.ingredients.slice();
   }
+
 
   addIngredient(ingredient: Ingredient) {
     this.ingredients.push(ingredient);
@@ -25,4 +28,5 @@ export class ShoppingListService {
     this.ingredients.push(...ingredients)
     this.ingredientsChanged.next(this.ingredients.slice())
   }
+
 }

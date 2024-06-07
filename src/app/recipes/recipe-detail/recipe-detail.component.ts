@@ -1,38 +1,40 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {Recipe} from "../recipe.model";
-import {IngredientType} from "../../shopping-list/shopping-list.model";
-import {RecipesService} from "../recipes.service";
-import {ActivatedRoute, Params, Router} from "@angular/router";
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params, Router } from '@angular/router';
+
+import { Recipe } from '../recipe.model';
+import { RecipeService } from '../recipe.service';
 
 @Component({
   selector: 'app-recipe-detail',
   templateUrl: './recipe-detail.component.html',
-  styleUrl: './recipe-detail.component.css'
+  styleUrls: ['./recipe-detail.component.css']
 })
 export class RecipeDetailComponent implements OnInit {
-  @Input() recipe: Recipe
-  ingredients: IngredientType[]
-  id: number
+  recipe: Recipe;
+  id: number;
 
-  // constructor(private shoppingListService: ShoppingListService ) {}
-  constructor(private recipeService: RecipesService, private route: ActivatedRoute, private router: Router) {
+  constructor(private recipeService: RecipeService,
+              private route: ActivatedRoute,
+              private router: Router) {
   }
 
   ngOnInit() {
     this.route.params
-      .subscribe((params: Params) => {
-        this.id = +params['id'];
-        this.recipe = this.recipeService.getRecipe(this.id)
-      })
-    // this.ingredients = this.shoppingListService.getIngredients()
+      .subscribe(
+        (params: Params) => {
+          this.id = +params['id'];
+          this.recipe = this.recipeService.getRecipe(this.id);
+        }
+      );
   }
 
   onAddToShoppingList() {
-    this.recipeService.addIngredientToTheShoppingList(this.recipe.ingredients)
+    this.recipeService.addIngredientsToShoppingList(this.recipe.ingredients);
   }
 
-  onRecipeEdit() {
-    // this.router.navigate(["edit"], {relativeTo: this.route})
-    this.router.navigate(["", this.id, "edit"], {relativeTo: this.route})
+  onEditRecipe() {
+    this.router.navigate(['edit'], {relativeTo: this.route});
+    // this.router.navigate(['../', this.id, 'edit'], {relativeTo: this.route});
   }
+
 }

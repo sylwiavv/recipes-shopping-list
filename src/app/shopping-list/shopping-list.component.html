@@ -1,23 +1,16 @@
 <div class="row">
   <div class="col-xs-10">
     <app-shopping-edit></app-shopping-edit>
-    <hr/>
+    <hr>
     <ul class="list-group">
-      <li *ngFor="let ingredient of ingredients">
       <a
-        [ngStyle]="{backgroundColor: ingredient.name.toLowerCase() === 'apple' ? 'green': 'pink'}"
-        [ngClass]="{'pink': ingredient.name.toLowerCase() === 'apple'}"
         class="list-group-item"
         style="cursor: pointer"
-
+        *ngFor="let ingredient of ingredients; let i = index"
+        (click)="onEditItem(i)"
       >
-          {{ ingredient.name }} ({{ ingredient.amount }})
+        {{ ingredient.name }} ({{ ingredient.amount }})
       </a>
-      </li>
     </ul>
   </div>
-  <p basicHighLightDirective>Hello pink test</p>
-  <p betterBasicHighLightDirective>Hello blue better</p>
-  <p betterBasicHighLightDirectiveWithHostBinding>Hello blue Host Binding</p>
-  <p betterBasicHighLightDirectiveWithHostBinding [defaultColor]="'#b0815a'" [highlightColor]="'#a64a00'">Hello blue Host Binding</p>
 </div>
